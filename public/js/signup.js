@@ -14,7 +14,8 @@ const signupFormHandler = async function(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+    alert('Successfully signed up');
+    document.location.replace('/');
   } else {
     alert('Failed to sign up');
   }
@@ -22,4 +23,4 @@ const signupFormHandler = async function(event) {
 
 document
   .querySelector('#signup-form')
-  .addEventListener('submit', signupFormHandler);
+  .addEventListener('click', signupFormHandler);
